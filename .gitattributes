@@ -1,9 +1,0 @@
-# Auto-detect text files and normalize line endings
-* text=auto
-
-# Always use LF for source code
-*.py text eol=lf
-*.ipynb text eol=lf
-*.csv text eol=lf
-*.txt text eol=lf
-*.md text eol=lf
