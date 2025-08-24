@@ -45,3 +45,4 @@ for sender, message, color in st.session_state.messages:
         f"<p style='color:{color}'><b>{sender}:</b> {message}</p>",
         unsafe_allow_html=True
     )
+

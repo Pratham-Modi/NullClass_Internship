@@ -70,3 +70,4 @@ def predict_sentiment(text_input):
         return 'neutral', confidence
 
     return sentiment, confidence
+
