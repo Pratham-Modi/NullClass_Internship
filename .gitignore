@@ -1,14 +1,2 @@
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-env/
-.ENV/
-.env
-.ipynb_checkpoints/
-*.csv
-*.pkl
-.DS_Store
-Thumbs.db
-
+.vscode
+.gitignore

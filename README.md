@@ -1,132 +1,162 @@
-# 🤖 Task 4: Sentiment-Aware Chatbot
+# NullClass Internship – Final Report
 
-This project is an intelligent, real-time **Sentiment-Aware Chatbot** that detects emotions from user input and responds with empathetic, context-appropriate replies. Built with **Streamlit**, it leverages a machine learning pipeline trained on **15,000 high-quality samples** and supports **positive**, **neutral**, and **negative** sentiment detection.
-
----
-
-## 🚀 Tech Stack
-
-- 🎨 **Streamlit** – Interactive chatbot interface  
-- 🧠 **Scikit-learn** – TF-IDF + Logistic Regression for sentiment classification  
-- 🧹 **NLTK** – Lemmatization and preprocessing  
-- 📊 **Seaborn/Matplotlib** – Confusion matrix for evaluation  
-- 🧠 **Custom dataset** – 15k samples with rich tone diversity  
-- 🧾 **Pickle** – Model + Vectorizer persistence  
+## 📌 Internship Information
+- **Internship Provider:** NullClass  
+- **Intern:** Pratham Modi  
+- **Duration:** 25 June 2025 – 25 August 2025 (2 months)  
+- **Deliverables:** 5 AI/ML/NLP tasks implemented as per company requirements  
 
 ---
 
-## ✨ Features
-
-✅ Real-time chatbot with sentiment-based dynamic responses  
-✅ Handles subtle expressions, sarcasm, and nuanced tones  
-✅ Clean UI with color-coded replies, emoji support, and chat history  
-✅ 15K-line dataset 
-✅ Robust text preprocessing (stopwords, lemmatization, n-grams)  
-✅ Confidence-aware response logic (hidden from UI)  
-✅ Easy to retrain with new data  
-
----
-
-## 🧱 Project Structure
+## 📂 Repository Structure
 
 ```
-Task4_SentimentChatbot/
+NullClass_Internship/
 │
-├── data/
-│   └── sentiment_dataset.csv        # Final 15,000-line dataset for training
-│
-├── src/
-│   └── sentiment_logic.py           # Preprocessing and prediction logic used in app
-│
-├── sentiment_model.ipynb            # Jupyter notebook for model training, evaluation, and prediction
-├── sentiment_model.pkl              # Saved trained model, vectorizer, label encoder
-├── app.py                          # Streamlit UI and chatbot logic
-├── requirements.txt                # Dependencies
-├── .gitignore                     # Ignored files
-└── README.md                      # Project overview and instructions
+├── Task1_Summarizer/
+├── Task2_MultiModalChatbot/
+├── Task3_KnowledgeUpdater/
+├── Task4_SentimentChatbot/
+├── Task5_PaperSearch/
+├── README.md                  # This file
+└── .gitignore                 # Ignored files (e.g., .vscode/, .env)
 ```
+
+**Note:** `.vscode/` and `.env` files are excluded from GitHub.
 
 ---
 
-## 🔧 Setup Instructions
+## 📝 Tasks Overview
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Pratham-Modi/NullClassInternship_Task4_SentimentAwareChatbot
-cd NullClassInternship_Task4_SentimentChatbot
-```
-
-### 2. (Optional) Create a Virtual Environment
-
-```bash
-python -m venv venv
-venv\Scripts\activate     # Windows
-# or
-source venv/bin/activate  # macOS/Linux
-```
-
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the Streamlit App
-
-```bash
-streamlit run app.py
-```
+### **Task 1: Extractive Summarizer**
+- **Goal:** Implement extractive summarization to generate concise summaries.  
+- **Method:** TF-IDF sentence ranking + selection.  
+- **Key Files:**  
+  - `Summarizer.ipynb` – model training & examples  
+  - `requirements.txt`  
+- **Outcome:** Summarized text with visualized sentence importance.  
+- **Accuracy/Metrics:** Works effectively on arbitrary text; quality depends on input size.  
 
 ---
 
-## 💬 Sample Interactions
-
-**You:** I didn't expect this to be so good!  
-**Bot (positive):** 😊 I'm glad to hear that!
-
-**You:** It’s alright, could be better.  
-**Bot (neutral):** 😐 Thanks for sharing your thoughts.
-
-**You:** Worst experience ever. Not happy at all.  
-**Bot (negative):** 😟 I'm sorry to hear that. Let me know if I can help!
-
----
-
-## 📊 Model Details
-
-- **Algorithm:** Logistic Regression  
-- **Vectorizer:** TF-IDF with n-grams (1,2), stopword removal, sublinear TF  
-- **Accuracy:** ~85% on test set (clean, balanced data)  
-- **Dataset:** 15,000 entries with realistic tones (neutral/contrastive/sarcastic)  
-- **Preprocessing:**
-  - Stopword removal (via `sklearn`)
-  - Lemmatization (via `nltk`)
-  - Cleaned punctuation, links, and case
+### **Task 2: Multi-Modal Chatbot**
+- **Goal:** Extend chatbot to handle text + images using Gemini API.  
+- **Features:**  
+  - Text conversation  
+  - Image insights  
+  - AI image generation  
+  - Collapsible instruction sidebar  
+- **Key Files:**  
+  - `app.py` – Streamlit app  
+  - `.env` – API key (ignored in repo)  
+- **Outcome:** Fully functional multimodal chatbot with UI.  
 
 ---
 
-## 📦 requirements.txt
-
-```
-streamlit
-scikit-learn
-nltk
-seaborn
-matplotlib
-```
-
----
-
-## 📌 Notes
-
-- The model uses a confidence score to guide internal logic (not shown in UI)
-- All data resides locally — no API calls required
-- Easily extendable: just add more rows to `data/sentiment_dataset.csv` and retrain
+### **Task 3: AI-Powered Knowledge Updater**
+- **Goal:** Dynamically expand chatbot knowledge base.  
+- **Method:**  
+  - Local vector DB (ChromaDB)  
+  - Wikipedia fetch + embeddings  
+  - Gemini fallback when missing info  
+- **Key Files:**  
+  - `src/` – embedding, vector store, Gemini bot  
+  - `app.py` – Streamlit UI  
+- **Outcome:** Chatbot improves knowledge over time.  
+- **Accuracy/Metrics:** Vector search + Gemini ensures high recall.  
 
 ---
 
-## 👨‍💻 Developed By
+### **Task 4: Sentiment-Aware Chatbot**
+- **Goal:** Integrate sentiment analysis into chatbot.  
+- **Method:** Logistic Regression + TF-IDF + preprocessing (15k dataset).  
+- **Key Files:**  
+  - `sentiment_model.ipynb` – training & evaluation  
+  - `sentiment_model.pkl` – saved model  
+  - `app.py` – Streamlit chatbot  
+- **Outcome:** Chatbot adapts replies based on positive/neutral/negative tone.  
+- **Accuracy/Metrics:** ~85% accuracy (tested on balanced dataset).  
 
-**Pratham Modi**  
-📅 July 2025 
+---
+
+### **Task 5: Research Paper Semantic Search Engine**
+- **Goal:** Build expert chatbot for scientific papers (arXiv).  
+- **Method:**  
+  - Sentence Transformers embeddings  
+  - TF-IDF hybrid ranking  
+  - Streamlit frontend for search  
+- **Key Files:**  
+  - `data/arxiv_subset.csv` – dataset  
+  - `models/paper_embeddings.npy` – embeddings  
+  - `src/search_engine.py` – hybrid ranking  
+- **Outcome:** Retrieves and explains relevant research papers.  
+- **Accuracy/Metrics:** Returns top-5 most relevant results using cosine similarity.  
+
+---
+
+## ⚙️ Setup Instructions
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Pratham-Modi/NullClass_Internship.git
+   cd NullClass_Internship
+
+2. **Navigate to a Task**  
+
+    Example for Task 2:  
+
+    ```bash
+    cd Task2_MultiModalChatbot
+    ```
+
+3. **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Run the Application**
+
+- For Jupyter Notebook tasks:
+    ```bash
+    jupyter notebook Summarizer.ipynb
+    ```
+
+- For Streamlit apps:
+    ```bash
+    streamlit run app.py
+    ```
+
+5. **API Keys**   
+
+    Create a .env file inside tasks requiring Gemini API:  
+
+    ```bash
+    GOOGLE_API_KEY=your_api_key_here
+    ```
+
+---
+
+## 📊 Evaluation Metrics (Summary)
+
+- Minimum Accuracy Requirement: 70%
+- Task 1: Summarization quality evaluated by coverage of key sentences
+- Task 2: Verified text+image integration with Gemini API
+- Task 3: Evaluated on ability to add knowledge & fallback to Gemini
+- Task 4: Achieved ~85% accuracy (above requirement)
+- Task 5: Top-5 paper retrieval accuracy tested with hybrid search
+
+---
+
+## 📌 Final Notes
+
+This repository contains the complete internship deliverables:
+
+- 5 structured tasks, each with its own implementation.
+- Streamlit GUIs and Jupyter notebooks where required.
+- Achieved required performance metrics
+- Fully compliant with company’s submission guidelines.
+
+---
+
+## 👨‍💻 Developed by:   
+Pratham Modi
