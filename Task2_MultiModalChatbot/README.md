@@ -44,7 +44,7 @@ Task2_MultiModalChatbot/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/NullClassInternship_Task2_MultiModalChatbot.git
+git clone https://github.com/Pratham-Modi/NullClass_Internship/tree/main/Task2_MultiModalChatbot
 cd NullClassInternship_Task2_MultiModalChatbot
 ```
 

@@ -56,7 +56,7 @@ Task3_KnowledgeUpdater/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/NullClassInternship_Task3_KnowledgeUpdater.git
+git clone https://github.com/Pratham-Modi/NullClass_Internship/tree/main/Task3_KnowledgeUpdater
 cd NullClassInternship_Task3_KnowledgeUpdater
 ```
 

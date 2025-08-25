@@ -98,7 +98,7 @@ NullClass_Internship/
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Pratham-Modi/NullClass_Internship.git
+   git clone https://github.com/Pratham-Modi/NullClass_Internship
    cd NullClass_Internship
 
 2. **Navigate to a Task**  

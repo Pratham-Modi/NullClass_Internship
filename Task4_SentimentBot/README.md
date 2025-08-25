@@ -53,7 +53,7 @@ Task4_SentimentChatbot/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Pratham-Modi/NullClassInternship_Task4_SentimentAwareChatbot
+git clone https://github.com/Pratham-Modi/NullClass_Internship/tree/main/Task4_SentimentBot
 cd NullClassInternship_Task4_SentimentChatbot
 ```
 

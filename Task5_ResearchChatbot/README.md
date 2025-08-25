@@ -58,7 +58,7 @@ Task5/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/NullClassInternship_Task5_PaperSearch.git
+git clone https://github.com/Pratham-Modi/NullClass_Internship/tree/main/Task5_ResearchChatbot
 cd NullClassInternship_Task5_PaperSearch
 ```
 

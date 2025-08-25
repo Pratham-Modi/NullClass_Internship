@@ -42,7 +42,7 @@ Task1_Summarizer/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Pratham-Modi/Task1_ExtractiveSummarizer
+git clone https://github.com/Pratham-Modi/NullClass_Internship/tree/main/Task1_Summarizer
 cd Task1_Summarizer
 ```
 
