@@ -27,6 +27,7 @@ This project implements an **extractive summarization technique** to generate co
 ## 🧱 Project Structure
 
 ```
+
 Task1_Summarizer/
 │
 ├── Summarizer.ipynb # Jupyter notebook for model training and examples
@@ -47,11 +48,13 @@ cd Task1_Summarizer
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 3. Run the Notebook
+
 ```bash
 Open Summarizer.ipynb in Jupyter Notebook or VS Code and run the cells to generate summaries and visualize sentence importance.
 ```
@@ -69,5 +72,5 @@ Open Summarizer.ipynb in Jupyter Notebook or VS Code and run the cells to genera
 
 👨‍💻 Developed By
 
-Pratham Modi   
+Pratham Modi  
 📅 June 2025
