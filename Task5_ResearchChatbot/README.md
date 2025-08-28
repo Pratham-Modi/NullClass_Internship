@@ -31,7 +31,7 @@ This project implements a **semantic search engine** for academic papers using a
 
 ## 🧱 Final Project Structure
 
-```
+```bash
 Task5/
 │
 ├── app.py                 # Streamlit app (frontend logic)
@@ -67,6 +67,7 @@ cd NullClassInternship_Task5_PaperSearch
 ```bash
 python -m venv venv
 venv\Scripts\activate     # On Windows
+#OR
 source venv/bin/activate  # On Linux/macOS
 ```
 
@@ -106,7 +107,7 @@ streamlit run app.py
 
 ## 📦 requirements.txt
 
-```
+```bash
 streamlit
 numpy
 pandas
@@ -124,7 +125,6 @@ sentence-transformers
 - The alpha parameter can be tuned (range 0 to 1) to give more weight to either TF-IDF (closer to 1) or semantic similarity (closer to 0), improving relevance based on use case.
 - The UI includes helpful tips and a sidebar for better user experience.
 - The project uses st.cache_data to cache model loading and embeddings for faster repeated queries.
-
 
 ---
 
