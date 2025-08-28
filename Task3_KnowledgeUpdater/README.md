@@ -34,7 +34,7 @@ The entire system is built with an interactive **Streamlit** UI, and it continuo
 
 ## 🧱 Folder Structure
 
-```
+```bash
 Task3_KnowledgeUpdater/
 │
 ├── src/
@@ -106,7 +106,7 @@ streamlit run app.py
 
 ## 📦 requirements.txt
 
-```
+```bash
 streamlit
 wikipedia
 sentence-transformers
@@ -115,7 +115,7 @@ google-generativeai
 python-dotenv
 ```
 
---- 
+---
 
 ## 📌 Notes
 
@@ -127,5 +127,6 @@ python-dotenv
 ---
 
 ## 👨‍💻 Developed by
+
 **Pratham Modi**  
 📅 July 2025
