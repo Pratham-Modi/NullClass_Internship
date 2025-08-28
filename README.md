@@ -125,13 +125,13 @@ NullClass_Internship/
 
 4. **Run the Application**
 
-- For Jupyter Notebook tasks:
+    For Jupyter Notebook tasks:
 
     ```bash
     jupyter notebook Summarizer.ipynb
     ```
 
-  - For Streamlit apps:
+    For Streamlit apps:
 
     ```bash
     streamlit run app.py
