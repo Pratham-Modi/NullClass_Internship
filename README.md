@@ -1,6 +1,7 @@
 # NullClass Internship – Final Report
 
 ## 📌 Internship Information
+
 - **Internship Provider:** NullClass  
 - **Intern:** Pratham Modi  
 - **Duration:** 25 June 2025 – 25 August 2025 (2 months)  
@@ -10,7 +11,7 @@
 
 ## 📂 Repository Structure
 
-```
+```bash
 NullClass_Internship/
 │
 ├── Task1_Summarizer/
@@ -29,6 +30,7 @@ NullClass_Internship/
 ## 📝 Tasks Overview
 
 ### **Task 1: Extractive Summarizer**
+
 - **Goal:** Implement extractive summarization to generate concise summaries.  
 - **Method:** TF-IDF sentence ranking + selection.  
 - **Key Files:**  
@@ -40,6 +42,7 @@ NullClass_Internship/
 ---
 
 ### **Task 2: Multi-Modal Chatbot**
+
 - **Goal:** Extend chatbot to handle text + images using Gemini API.  
 - **Features:**  
   - Text conversation  
@@ -54,6 +57,7 @@ NullClass_Internship/
 ---
 
 ### **Task 3: AI-Powered Knowledge Updater**
+
 - **Goal:** Dynamically expand chatbot knowledge base.  
 - **Method:**  
   - Local vector DB (ChromaDB)  
@@ -68,6 +72,7 @@ NullClass_Internship/
 ---
 
 ### **Task 4: Sentiment-Aware Chatbot**
+
 - **Goal:** Integrate sentiment analysis into chatbot.  
 - **Method:** Logistic Regression + TF-IDF + preprocessing (15k dataset).  
 - **Key Files:**  
@@ -80,6 +85,7 @@ NullClass_Internship/
 ---
 
 ### **Task 5: Research Paper Semantic Search Engine**
+
 - **Goal:** Build expert chatbot for scientific papers (arXiv).  
 - **Method:**  
   - Sentence Transformers embeddings  
@@ -97,9 +103,11 @@ NullClass_Internship/
 ## ⚙️ Setup Instructions
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/Pratham-Modi/NullClass_Internship
    cd NullClass_Internship
+   ```
 
 2. **Navigate to a Task**  
 
@@ -110,6 +118,7 @@ NullClass_Internship/
     ```
 
 3. **Install Dependencies**
+
     ```bash
     pip install -r requirements.txt
     ```
@@ -117,16 +126,18 @@ NullClass_Internship/
 4. **Run the Application**
 
 - For Jupyter Notebook tasks:
+
     ```bash
     jupyter notebook Summarizer.ipynb
     ```
 
-- For Streamlit apps:
+  - For Streamlit apps:
+
     ```bash
     streamlit run app.py
     ```
 
-5. **API Keys**   
+5. **API Keys**
 
     Create a .env file inside tasks requiring Gemini API:  
 
@@ -158,5 +169,6 @@ This repository contains the complete internship deliverables:
 
 ---
 
-## 👨‍💻 Developed by:   
+## 👨‍💻 Developed by  
+
 Pratham Modi
