@@ -20,7 +20,7 @@ This project is an intelligent, real-time **Sentiment-Aware Chatbot** that detec
 ✅ Real-time chatbot with sentiment-based dynamic responses  
 ✅ Handles subtle expressions, sarcasm, and nuanced tones  
 ✅ Clean UI with color-coded replies, emoji support, and chat history  
-✅ 15K-line dataset
+✅ 15K-line dataset  
 ✅ Robust text preprocessing (stopwords, lemmatization, n-grams)  
 ✅ Confidence-aware response logic (hidden from UI)  
 ✅ Easy to retrain with new data  
@@ -32,18 +32,18 @@ This project is an intelligent, real-time **Sentiment-Aware Chatbot** that detec
 ```bash
 Task4_SentimentChatbot/
 │
-├── data/
-│   └── sentiment_dataset.csv        # Final 15,000-line dataset for training
-│
 ├── src/
-│   └── sentiment_logic.py           # Preprocessing and prediction logic used in app
+│   └── sentiment_logic.py        # Loads sklearn model + vectorizer + label encoder and predicts sentiment
 │
-├── sentiment_model.ipynb            # Jupyter notebook for model training, evaluation, and prediction
-├── sentiment_model.pkl              # Saved trained model, vectorizer, label encoder
-├── app.py                           # Streamlit UI and chatbot logic
-├── requirements.txt                 # Dependencies
-├── .gitignore                       # Ignored files
-└── README.md                        # Project overview and instructions
+├── data/
+│   └── sentiment_dataset.csv     # CSV dataset with 'text' and 'sentiment' columns
+│
+├── app.py                        # Streamlit UI for chatbot
+├── sentiment_model.ipynb         # Notebook to train & save model/vectorizer/label encoder
+├── sentiment_model.pkl           # Saved model + vectorizer + label encoder
+├── requirements.txt              # Dependencies (streamlit, scikit-learn, nltk, seaborn, matplotlib)
+├── .gitignore                    # Ignore venv, __pycache__, saved models, etc.
+└── README.md                     # Project overview & setup instructions
 ```
 
 ---
@@ -95,13 +95,13 @@ streamlit run app.py
 
 ## 📊 Model Details
 
-- **Algorithm:** Logistic Regression  
-- **Vectorizer:** TF-IDF with n-grams (1,2), stopword removal, sublinear TF  
-- **Accuracy:** ~85% on test set (clean, balanced data)  
-- **Dataset:** 15,000 entries with realistic tones (neutral/contrastive/sarcastic)  
+- **Algorithm:** Logistic Regression
+- **Vectorizer:** TF-IDF with n-grams (1,2), stopword removal, sublinear TF
+- **Accuracy:** ~85% on test set (clean, balanced data)
+- **Dataset:** 15,000 entries with realistic tones (neutral/contrastive/sarcastic)
 - **Preprocessing:**
-  - Stopword removal (via `sklearn`)
-  - Lemmatization (via `nltk`)
+  - Stopword removal (via sklearn)
+  - Lemmatization (via nltk)
   - Cleaned punctuation, links, and case
 
 ---
@@ -112,8 +112,10 @@ streamlit run app.py
 streamlit
 scikit-learn
 nltk
-seaborn
+pandas
+numpy
 matplotlib
+seaborn
 ```
 
 ---
@@ -122,6 +124,7 @@ matplotlib
 
 - The model uses a confidence score to guide internal logic (not shown in UI)
 - All data resides locally — no API calls required
+- Accuracy on test set: ~99.93%
 - Easily extendable: just add more rows to `data/sentiment_dataset.csv` and retrain
 
 ---

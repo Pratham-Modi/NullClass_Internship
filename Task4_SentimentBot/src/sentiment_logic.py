@@ -1,39 +1,49 @@
-# src/sentiment_logic.py
-
 import pickle
-import os
 import re
-import string
+from sklearn.feature_extraction import text
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
+import nltk
 
-# Path to the trained model
-MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'sentiment_model.pkl')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+nltk.download('stopwords')
 
-# Load the model, vectorizer, and label encoder
-with open(MODEL_PATH, 'rb') as f:
-    model_data = pickle.load(f)
-    model = model_data['model']
-    vectorizer = model_data['vectorizer']
-    label_encoder = model_data['label_encoder']
+with open('sentiment_model.pkl', 'rb') as f:
+    model, vectorizer, le = pickle.load(f)
 
-def preprocess_text(text):
-    """
-    Preprocess the input text:
-    - Convert to lowercase
-    - Remove punctuation
-    - Remove extra whitespace
-    """
-    text = text.lower()
-    text = re.sub(f"[{re.escape(string.punctuation)}]", "", text)
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
+stop_words = set(stopwords.words('english')).union(text.ENGLISH_STOP_WORDS)
+lemmatizer = WordNetLemmatizer()
 
-def predict_sentiment(text):
-    """
-    Predict the sentiment of the given text.
-    Returns the label as a string (e.g., 'Positive', 'Negative', 'Neutral')
-    """
-    text = preprocess_text(text)
-    text_vector = vectorizer.transform([text])
-    pred = model.predict(text_vector)
-    label = label_encoder.inverse_transform(pred)[0]
-    return label
+# Text preprocessing
+def clean_text(text_input):
+    """Clean and preprocess user input."""
+    text_input = re.sub(r"http\S+", "", text_input)  # remove URLs
+    text_input = re.sub(r"[^a-zA-Z\s]", "", text_input)  # remove punctuation/numbers
+    text_input = text_input.lower()
+    words = text_input.split()
+    
+    cleaned_words = []
+    for word in words:
+        if word not in stop_words:
+            try:
+                cleaned_words.append(lemmatizer.lemmatize(word))
+            except:
+                cleaned_words.append(word)
+    return " ".join(cleaned_words)
+
+# Sentiment analysis
+def analyze_sentiment(text_input):
+    """Predict sentiment and return label + confidence."""
+    if not text_input.strip():
+        return {"label": "NEUTRAL", "score": 0.0}
+
+    cleaned = clean_text(text_input)
+    vector = vectorizer.transform([cleaned])
+    prediction = model.predict(vector)[0]
+    probabilities = model.predict_proba(vector)[0]
+
+    sentiment_label = le.inverse_transform([prediction])[0]
+    confidence = round(max(probabilities) * 100, 2)
+
+    return {"label": sentiment_label.upper(), "score": confidence}
