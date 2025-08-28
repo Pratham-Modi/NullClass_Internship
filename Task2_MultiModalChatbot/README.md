@@ -71,7 +71,6 @@ streamlit run app.py
 
 ---
 
-
 ## 💡 Example Usage
 
 ### 💬 Chatbot Mode
@@ -93,7 +92,7 @@ Enter a prompt:
 
 ## 📦 requirements.txt
 
-```
+```bash
 streamlit
 Pillow
 google-generativeai
@@ -113,5 +112,5 @@ python-dotenv
 
 ## 👨‍💻 Developed by
 
-Pratham Modi   
+Pratham Modi  
 📅 July 2025

@@ -26,8 +26,7 @@ This project implements an **extractive summarization technique** to generate co
 
 ## 🧱 Project Structure
 
-```
-
+```bash
 Task1_Summarizer/
 │
 ├── Summarizer.ipynb # Jupyter notebook for model training and examples
