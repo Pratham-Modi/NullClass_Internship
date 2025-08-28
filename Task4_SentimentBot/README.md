@@ -20,7 +20,7 @@ This project is an intelligent, real-time **Sentiment-Aware Chatbot** that detec
 ✅ Real-time chatbot with sentiment-based dynamic responses  
 ✅ Handles subtle expressions, sarcasm, and nuanced tones  
 ✅ Clean UI with color-coded replies, emoji support, and chat history  
-✅ 15K-line dataset 
+✅ 15K-line dataset
 ✅ Robust text preprocessing (stopwords, lemmatization, n-grams)  
 ✅ Confidence-aware response logic (hidden from UI)  
 ✅ Easy to retrain with new data  
@@ -29,7 +29,7 @@ This project is an intelligent, real-time **Sentiment-Aware Chatbot** that detec
 
 ## 🧱 Project Structure
 
-```
+```bash
 Task4_SentimentChatbot/
 │
 ├── data/
@@ -40,10 +40,10 @@ Task4_SentimentChatbot/
 │
 ├── sentiment_model.ipynb            # Jupyter notebook for model training, evaluation, and prediction
 ├── sentiment_model.pkl              # Saved trained model, vectorizer, label encoder
-├── app.py                          # Streamlit UI and chatbot logic
-├── requirements.txt                # Dependencies
-├── .gitignore                     # Ignored files
-└── README.md                      # Project overview and instructions
+├── app.py                           # Streamlit UI and chatbot logic
+├── requirements.txt                 # Dependencies
+├── .gitignore                       # Ignored files
+└── README.md                        # Project overview and instructions
 ```
 
 ---
@@ -108,7 +108,7 @@ streamlit run app.py
 
 ## 📦 requirements.txt
 
-```
+```bash
 streamlit
 scikit-learn
 nltk
@@ -129,4 +129,4 @@ matplotlib
 ## 👨‍💻 Developed By
 
 **Pratham Modi**  
-📅 July 2025 
+📅 July 2025
