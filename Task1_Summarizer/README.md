@@ -70,4 +70,4 @@ Open Summarizer.ipynb in Jupyter Notebook or VS Code and run the cells to genera
 👨‍💻 Developed By
 
 Pratham Modi   
-📅 July 2025
+📅 June 2025
